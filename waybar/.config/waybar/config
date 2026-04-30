@@ -44,8 +44,19 @@
         "separate-outputs": true
     },
     "mpris": {
-        "format": "{title}",
-        "max-length": 20,
+        "format": "{player_icon} {title}",
+        "format-paused": "󰏤 {title}",
+        "max-length": 25,
+        "player-icons": {
+            "default": "",
+            "mpv": "󰎁",
+            "vlc": "󰎁",
+            "smplayer": "󰎁",
+            "spotify": "",
+            "brave": "",
+            "chromium": "",
+            "firefox": ""
+        },
         "ellipsis": "..."
     },
     "wireplumber": {
