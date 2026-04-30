@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-REPO_URL="https://github.com/shyamjames/dotfiles-black-minimal.git"
-REPO_DIR="${HOME}/dotfiles-black-minimal"
+REPO_URL="https://github.com/shyamjames/dotfiles-catinblue.git"
+REPO_DIR="${HOME}/dotfiles-catinblue"
 YAY_DIR="/tmp/yay-$$"
 
 DEPENDENCIES=(

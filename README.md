@@ -1,11 +1,11 @@
-# dotfiles-black-minimal
+# dotfiles-catinblue
 
-A minimal, high-contrast, off-black Hyprland configuration designed for focus and aesthetic consistency.
+A beautiful, cohesive Hyprland configuration built around the Catppuccin Mocha theme for maximum aesthetic appeal.
 
 
 ![Desktop Preview](assets/fullscreen.png)
 
-This setup is built around a "Minimal Off-Black" theme (#1a1a1a background and #e6e6e6 foreground). It uses **Hyprland** as the compositor, **Waybar** for the status bar, and **Kitty** as the terminal emulator.
+This setup is built around the "Catppuccin Mocha" theme (#1e1e2e background and #cdd6f4 foreground). It uses **Hyprland** as the compositor, **Waybar** for the status bar, and **Kitty** as the terminal emulator.
 
 ### Core Components
 - **Compositor:** [Hyprland](https://hyprland.org/)
@@ -24,14 +24,14 @@ This setup is built around a "Minimal Off-Black" theme (#1a1a1a background and #
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/shyamjames/dotfiles-black-minimal.git ~/dotfiles-black-minimal
+git clone https://github.com/shyamjames/dotfiles-catinblue.git ~/dotfiles-catinblue
 ```
 
 ### 2. One-click dependency install (yay + optional stow)
 This command downloads and runs the installer script directly.
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/shyamjames/dotfiles-black-minimal/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/shyamjames/dotfiles-catinblue/main/install.sh | bash
 ```
 
 ### 3. Install GNU Stow and symlink configurations
@@ -45,11 +45,11 @@ This repo uses [GNU Stow](https://www.gnu.org/software/stow/) to manage symlinks
 sudo pacman -S stow
 
 # Stow all packages (creates symlinks in ~)
-cd ~/dotfiles-black-minimal
-stow hypr ghostty kitty waybar rofi wlogout dunst zsh
+cd ~/dotfiles-catinblue
+stow hypr ghostty kitty waybar rofi wlogout dunst zsh alacritty nvim
 
 # SDDM theme must be copied manually (requires root)
-sudo cp -r ~/dotfiles-black-minimal/sddm/monochrome /usr/share/sddm/themes/
+sudo cp -r ~/dotfiles-catinblue/sddm/monochrome /usr/share/sddm/themes/
 ```
 
 To remove symlinks for a specific package:
