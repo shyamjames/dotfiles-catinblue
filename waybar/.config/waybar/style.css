@@ -1,0 +1,125 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "CaskaydiaCove Nerd Font Mono", monospace;
+    font-size: 14px;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: #1e1e2e;
+    /* Off-Black */
+    color: #cdd6f4;
+    /* Off-White */
+}
+
+/* Workspace indicators */
+window#waybar #workspaces,
+window#waybar #hyprland-workspaces {
+    padding: 0;
+}
+
+window#waybar #workspaces button,
+window#waybar #hyprland-workspaces button {
+    min-width: 0;
+    padding: 0 5px;
+    margin: 0 2px;
+    border-radius: 3px;
+    background: transparent;
+    color: #7f849c;
+    box-shadow: none;
+    text-shadow: none;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+window#waybar #workspaces button label,
+window#waybar #hyprland-workspaces button label {
+    color: #7f849c;
+}
+
+window#waybar #workspaces button:hover,
+window#waybar #hyprland-workspaces button:hover {
+    color: #bac2de;
+    background: transparent;
+}
+
+window#waybar #workspaces button:hover label,
+window#waybar #hyprland-workspaces button:hover label {
+    color: #bac2de;
+}
+
+window#waybar #workspaces button.active,
+window#waybar #workspaces button.focused,
+window#waybar #hyprland-workspaces button.active,
+window#waybar #hyprland-workspaces button.focused {
+    color: #cdd6f4;
+    background: #313244;
+}
+
+window#waybar #workspaces button.active label,
+window#waybar #workspaces button.focused label,
+window#waybar #hyprland-workspaces button.active label,
+window#waybar #hyprland-workspaces button.focused label {
+    color: #cdd6f4;
+}
+
+window#waybar #workspaces button.visible,
+window#waybar #hyprland-workspaces button.visible {
+    color: #cdd6f4;
+}
+
+window#waybar #workspaces button.visible label,
+window#waybar #hyprland-workspaces button.visible label {
+    color: #cdd6f4;
+}
+
+#window {
+    font-weight: bold;
+}
+
+/* Right Modules */
+#mpris {
+    padding: 0 10px;
+    background-color: transparent;
+    color: #cdd6f4;
+}
+
+#wireplumber {
+    font-size: 14px;
+    padding: 0 10px;
+    background-color: transparent;
+    color: #cdd6f4;
+}
+
+#network,
+#bluetooth {
+    font-size: 18px;
+    padding: 0 10px;
+    background-color: transparent;
+    color: #cdd6f4;
+}
+
+#battery,
+#clock,
+#tray,
+#custom-tray-icon {
+    padding: 0 10px;
+    background-color: transparent;
+    color: #cdd6f4;
+}
+
+/* Specific styling for states */
+#battery.charging {
+    color: #cdd6f4;
+}
+
+#battery.warning {
+    color: #f9e2af;
+    /* Muted Yellow for warning */
+}
+
+#battery.critical {
+    color: #f38ba8;
+    /* Muted Red for critical */
+}
