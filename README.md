@@ -12,7 +12,7 @@ This setup is built around the "Catppuccin Mocha" theme (#1e1e2e background and 
 - **Terminal:** [Kitty](https://sw.kovidgoyal.net/kitty/) / [Ghostty](https://ghostty.org/)
 - **Status Bar:** [Waybar](https://github.com/Alexays/Waybar)
 - **Terminal:** [Kitty](https://sw.kovidgoyal.net/kitty/)
-- **Login Manager:** [SDDM](https://github.com/sddm/sddm) (with custom monochrome theme)
+- **Login Manager:** [SDDM](https://github.com/sddm/sddm) (with custom catinblue-mono theme)
 - **Application Launcher:** [Rofi](https://github.com/davatorium/rofi)
 - **Shell:** [Zsh](https://www.zsh.org/) (custom minimal config)
 - **Logout Menu:** [wlogout](https://github.com/ArtsyWork/wlogout)
@@ -49,7 +49,7 @@ cd ~/dotfiles-catinblue
 stow hypr ghostty kitty waybar rofi wlogout dunst zsh alacritty nvim
 
 # SDDM theme must be copied manually (requires root)
-sudo cp -r ~/dotfiles-catinblue/sddm/monochrome /usr/share/sddm/themes/
+sudo cp -r ~/dotfiles-catinblue/sddm/catinblue-mono /usr/share/sddm/themes/
 ```
 
 To remove symlinks for a specific package:
@@ -78,7 +78,7 @@ Create the directory if it doesn't exist and define the current theme:
 ```bash
 sudo mkdir -p /etc/sddm.conf.d
 echo "[Theme]
-Current=monochrome" | sudo tee /etc/sddm.conf.d/theme.conf
+Current=catinblue-mono" | sudo tee /etc/sddm.conf.d/theme.conf
 ```
 
 ### 6. Dependencies

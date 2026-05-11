@@ -1,0 +1,16 @@
+[SddmGreeterTheme]
+Name=CatInBlue Mono
+Description=Catppuccin Mocha theme for SDDM
+Author=CatInBlue Project
+InspiredBy=Inspired by the excellent Monochrome theme by Patrik Wyde. Huge thanks and credit to him for the foundational work!
+Copyright=(c) 2018, Patrik Wyde; (c) 2026, CatInBlue Project
+License=MIT
+Type=sddm-theme
+Version=20240410
+Screenshot=preview.png
+MainScript=Main.qml
+ConfigFile=theme.conf
+TranslationsDirectory=translations
+Theme-Id=catinblue-mono
+Theme-API=2.0
+QtVersion=6
