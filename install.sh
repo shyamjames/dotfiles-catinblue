@@ -7,13 +7,11 @@ YAY_DIR="/tmp/yay-$$"
 
 DEPENDENCIES=(
   hyprland
+  noctalia-shell
   ghostty
   kitty
-  waybar
   zsh
   rofi
-  wlogout
-  dunst
   swaybg
   hypridle
   hyprlock
@@ -43,10 +41,7 @@ STOW_PACKAGES=(
   hypr
   ghostty
   kitty
-  waybar
   rofi
-  wlogout
-  dunst
   zsh
   alacritty
   nvim

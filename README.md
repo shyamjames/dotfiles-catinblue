@@ -5,18 +5,17 @@ A beautiful, cohesive Hyprland configuration built around the Catppuccin Mocha t
 
 ![Desktop Preview](assets/fullscreen.png)
 
-This setup is built around the "Catppuccin Mocha" theme (#1e1e2e background and #cdd6f4 foreground). It uses **Hyprland** as the compositor, **Waybar** for the status bar, and **Kitty** as the terminal emulator.
+This setup is built around the "Catppuccin Mocha" theme (#1e1e2e background and #cdd6f4 foreground). It uses **Hyprland** as the compositor, **Noctalia Shell** as the desktop shell, and **Kitty** as the terminal emulator.
 
 ### Core Components
 - **Compositor:** [Hyprland](https://hyprland.org/)
+- **Desktop Shell:** [Noctalia Shell](https://noctalia.dev/)
 - **Terminal:** [Kitty](https://sw.kovidgoyal.net/kitty/) / [Ghostty](https://ghostty.org/)
-- **Status Bar:** [Waybar](https://github.com/Alexays/Waybar)
-- **Terminal:** [Kitty](https://sw.kovidgoyal.net/kitty/)
 - **Login Manager:** [SDDM](https://github.com/sddm/sddm) (with custom catinblue-mono theme)
-- **Application Launcher:** [Rofi](https://github.com/davatorium/rofi)
+- **Application Launcher:** [Noctalia Shell](https://noctalia.dev/)
 - **Shell:** [Zsh](https://www.zsh.org/) (custom minimal config)
-- **Logout Menu:** [wlogout](https://github.com/ArtsyWork/wlogout)
-- **Notification Daemon:** [Dunst](https://dunst-project.org/)
+- **Session Menu:** [Noctalia Shell](https://noctalia.dev/)
+- **Notification System:** [Noctalia Shell](https://noctalia.dev/)
 - **Wallpaper Utility:** [Swaybg](https://github.com/swaywm/swaybg)
 - **Idle/Lock:** [Hypridle](https://github.com/hyprwm/hypridle) & [Hyprlock](https://github.com/hyprwm/hyprlock)
 
@@ -46,7 +45,7 @@ sudo pacman -S stow
 
 # Stow all packages (creates symlinks in ~)
 cd ~/dotfiles-catinblue
-stow hypr ghostty kitty waybar rofi wlogout dunst zsh alacritty nvim
+stow hypr ghostty kitty rofi zsh alacritty nvim
 
 # SDDM theme must be copied manually (requires root)
 sudo cp -r ~/dotfiles-catinblue/sddm/catinblue-mono /usr/share/sddm/themes/
@@ -62,8 +61,13 @@ To restow (remove + re-link) a package:
 stow -R hypr
 ```
 
-### 4. Configure Zsh (Oh My Zsh & Plugins)
-This setup relies on **Oh My Zsh** and the `zsh-autosuggestions` plugin for the shell configuration. Install them before using the shell:
+### 4. Configure Noctalia and Zsh
+This setup relies on **Noctalia Shell** for the desktop shell and **Oh My Zsh** plus `zsh-autosuggestions` for the interactive shell. Install them before logging in:
+
+```bash
+# Install Noctalia Shell (Arch / AUR)
+yay -S noctalia-shell
+```
 
 ```bash
 # Install Oh My Zsh
@@ -85,13 +89,11 @@ Current=catinblue-mono" | sudo tee /etc/sddm.conf.d/theme.conf
 The following packages are required for this setup:
 
 - `hyprland`
+- `noctalia-shell`
 - `ghostty`
 - `kitty`
-- `waybar`
 - `zsh`
 - `rofi`
-- `wlogout`
-- `dunst`
 - `swaybg`
 - `hypridle`
 - `hyprlock`
@@ -116,7 +118,7 @@ The following packages are required for this setup:
 - `curl`
 
 > [!NOTE]
-> This setup uses **PipeWire** with **WirePlumber** for audio. Ensure `pipewire`, `wireplumber`, and `pipewire-pulse` are installed and running for volume controls to work in Waybar.
+> This setup uses **PipeWire** with **WirePlumber** for audio. Ensure `pipewire`, `wireplumber`, and `pipewire-pulse` are installed and running for volume controls to work in the shell.
 
 
 | Key | Action |
@@ -124,11 +126,11 @@ The following packages are required for this setup:
 | `Super + Return` | Open Kitty |
 | `Super + Q` | Kill Active Window |
 | `Super + E` | Open Thunar |
-| `Super + A` | Open Rofi App Launcher |
-| `Super + V` | Clipboard History (Rofi) |
+| `Super + A` | Toggle Noctalia Launcher |
+| `Super + V` | Open Noctalia Clipboard |
 | `Super + B` | Open Brave Browser |
-| `Super + Backspace` | Power Menu (Rofi) |
-| `Super + Shift + W` | Reload Waybar |
+| `Super + Backspace` | Open Noctalia Session Menu |
+| `Super + Shift + W` | Toggle Noctalia Bar |
 | `Print` | Screenshot Menu (Fullscreen/Window/Area) |
 
 > [!NOTE]
